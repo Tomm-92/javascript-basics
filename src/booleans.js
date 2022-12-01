@@ -47,14 +47,24 @@ return Math.sqrt(a) % 1 === 0;
 };
 
 function startsWith(char, string) {
-return string.startsWith(char);  // your code here
+return string.startsWith(char); 
 };
 
 function containsVowels(string) {
+  if (string.match(/[aeiou]/gi)) {
+  return true;
+}
+
+return false;
+
+
 };
 
+/*string.includes('a') || string.includes ('e') || string.includes ('i') || string.includes ('o') || string.includes ('u') || string.includes('A') || string.includes ('E') || string.includes ('I') || string.includes ('O') || string.includes ('U');
+/*string.match(/[aeiou]/gi */
+
 function isLowerCase(string) {
-  // your code here
+  return string.toLowerCase() == string;
 };
 
 module.exports = {
