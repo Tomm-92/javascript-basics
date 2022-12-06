@@ -1,70 +1,72 @@
 function negate(a) {
   return !a;
-};
+}
 
 function both(a, b) {
- return a && b;
-};
+  return a && b;
+}
 
 function either(a, b) {
   return a || b;
-};
+}
 
 function none(a, b) {
- return !a && !b;
-};
+  return !a && !b;
+  // !(a || b); //
+}
 
 function one(a, b) {
-return  a != b;
-};
+  return a !== b;
+  // (a || b) && !(a && b) //
+}
 
 function truthiness(a) {
-return Boolean(a);
-};
+  return Boolean(a);
+}
 
 function isEqual(a, b) {
   return a === b;
-};
+}
 
 function isGreaterThan(a, b) {
   return a > b;
-};
+}
 
 function isLessThanOrEqualTo(a, b) {
-  return a <=b;
-};
+  return a <= b;
+}
 
 function isOdd(a) {
-  return a % 2 == 1;
-};
+  return a % 2 === 1;
+}
 
 function isEven(a) {
-  return a % 2 == 0;
-};
+  return a % 2 === 0;
+}
 
 function isSquare(a) {
-return Math.sqrt(a) % 1 === 0;
-};
+  // return Math.sqrt(a) % 1 === 0; //
+  return Boolean(Math.sqrt(a) % 1 === 0);
+}
 
 function startsWith(char, string) {
-return string.startsWith(char); 
-};
+  return string.startsWith(char);
+  // string.charAt(0) === char; //
+}
 
 function containsVowels(string) {
   if (string.match(/[aeiou]/gi)) {
-  return true;
+    return true;
+  }
+
+  return false;
 }
 
-return false;
-
-
-};
-
-/*string.includes('a') || string.includes ('e') || string.includes ('i') || string.includes ('o') || string.includes ('u') || string.includes('A') || string.includes ('E') || string.includes ('I') || string.includes ('O') || string.includes ('U');
-/*string.match(/[aeiou]/gi */
+/* string.includes('a') || string.includes ('e') || string.includes ('i') || string.includes ('o') || string.includes ('u') || string.includes('A') || string.includes ('E') || string.includes ('I') || string.includes ('O') || string.includes ('U');
+/* string.match(/[aeiou]/gi */
 
 function isLowerCase(string) {
-  return string.toLowerCase() == string;
+  return string.toLowerCase() === string;
 };
 
 module.exports = {
